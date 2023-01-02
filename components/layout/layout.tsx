@@ -6,7 +6,7 @@ type LayoutProps = {
 	children?: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps): JSX.Element => {
+const Layout = ({ children }: LayoutProps) => {
 	return (
 		<>
 			<Head>
