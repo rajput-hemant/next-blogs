@@ -1,70 +1,34 @@
 import Hero from "../components/homepage/hero";
+import { getFeaturedPost } from "../lib/post-utils";
 import FeaturedPosts from "../components/homepage/featured-posts";
 
-export const DUMMY_POSTS = [
-	{
-		title: "Getting Started with Next.js",
-		image: "getting-started-nextjs.png",
-		excerpt:
-			"Next.js is the React Framework for Production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR and SSG.",
-		date: "2022-02-10",
-		slug: "getting-started-with-nextjs",
-		content: "# Getting Started",
-	},
-	{
-		title: "Getting Started with Next.js",
-		image: "getting-started-nextjs.png",
-		excerpt:
-			"Next.js is the React Framework for Production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR and SSG.",
-		date: "2022-02-10",
-		slug: "getting-started-with-nextjs",
-		content: "# Getting Started",
-	},
-	{
-		title: "Getting Started with Next.js",
-		image: "getting-started-nextjs.png",
-		excerpt:
-			"Next.js is the React Framework for Production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR and SSG.",
-		date: "2022-02-10",
-		slug: "getting-started-with-nextjs",
-		content: "# Getting Started",
-	},
-	{
-		title: "Getting Started with Next.js",
-		image: "getting-started-nextjs.png",
-		excerpt:
-			"Next.js is the React Framework for Production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR and SSG.",
-		date: "2022-02-10",
-		slug: "getting-started-with-nextjs",
-		content: "# Getting Started",
-	},
-	{
-		title: "Getting Started with Next.js",
-		image: "getting-started-nextjs.png",
-		excerpt:
-			"Next.js is the React Framework for Production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR and SSG.",
-		date: "2022-02-10",
-		slug: "getting-started-with-nextjs",
-		content: "# Getting Started",
-	},
-	{
-		title: "Getting Started with Next.js",
-		image: "getting-started-nextjs.png",
-		excerpt:
-			"Next.js is the React Framework for Production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR and SSG.",
-		date: "2022-02-10",
-		slug: "getting-started-with-nextjs",
-		content: "# Getting Started",
-	},
-];
-
-const HomePage = () => {
+const HomePage = ({
+	posts,
+}: {
+	posts: {
+		slug: string;
+		title: string;
+		image: string;
+		excerpt: string;
+		date: string;
+	}[];
+}) => {
 	return (
 		<>
 			<Hero />
-			<FeaturedPosts posts={DUMMY_POSTS} />
+			<FeaturedPosts posts={posts} />
 		</>
 	);
+};
+
+export const getStaticProps = () => {
+	const featuredPost = getFeaturedPost();
+
+	return {
+		props: {
+			posts: featuredPost,
+		},
+	};
 };
 
 export default HomePage;

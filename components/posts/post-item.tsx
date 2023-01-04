@@ -17,14 +17,21 @@ const PostItem = ({ post }: PostItemProps) => {
 	});
 
 	const imagePath = `/images/posts/${slug}/${image}`;
+	const linkPath = `/posts/${slug}`;
 
 	return (
 		// post
-		<li className="shadow-md bg-zinc-800 text-center">
-			<Link href="">
+		<li className="shadow-xl shadow-zinc-600 bg-zinc-800 text-center rounded-xl duration-100 active:scale-95">
+			<Link href={linkPath}>
 				{/* image */}
-				<div className="w-full max-h-80 overflow-hidden">
-					<Image src={imagePath} alt={title} width={600} height={200} />
+				<div className="w-full max-h-80 overflow-hidden p-2">
+					<Image
+						src={imagePath}
+						alt={title}
+						width={600}
+						height={200}
+						className="rounded-xl shadow-md shadow-gray-700 h-60 text-white"
+					/>
 				</div>
 				{/* content */}
 				<div className="p-4">

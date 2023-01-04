@@ -1,11 +1,7 @@
 import PostGrid from "./posts-grid";
-import { PostGridProps } from "./posts-grid";
+import { AllPostsPageProps } from "../../pages/posts";
 
-type AllPostsProps = {
-	posts: PostGridProps["posts"];
-};
-
-const AllPosts = ({ posts }: AllPostsProps) => {
+const AllPosts = ({ posts }: AllPostsPageProps) => {
 	return (
 		// posts
 		<section className="w-[90%] mx-auto">

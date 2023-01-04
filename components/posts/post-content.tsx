@@ -1,15 +1,15 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 import PostHeader from "./post-header";
-import { DUMMY_POSTS } from "../../pages";
+import { PostDetailPageProps } from "../../pages/posts/[slug]";
 
-const PostContent = () => {
-	const imagePath = `/images/posts/${DUMMY_POSTS[0].slug}/${DUMMY_POSTS[0].image}`;
+const PostContent = ({ posts }: PostDetailPageProps) => {
+	const imagePath = `/images/posts/${posts.slug}/${posts.image}`;
 
 	return (
 		<article className="w-[95%] max-w-5xl mx-auto my-8 text-xl bg-zinc-200 rounded-md p-4">
-			<PostHeader title={DUMMY_POSTS[0].title} image={imagePath} />
-			<ReactMarkdown>{DUMMY_POSTS[0].content}</ReactMarkdown>
+			<PostHeader title={posts.title} image={imagePath} />
+			<ReactMarkdown>{posts.content}</ReactMarkdown>
 		</article>
 	);
 };
