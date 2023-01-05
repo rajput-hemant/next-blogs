@@ -16,7 +16,7 @@ const MainNavigation = () => {
 							href="/posts"
 							className="text-zinc-100 hover:text-zinc-400 active:to-zinc-400 font-bold md:text-2xl"
 						>
-							Posts
+							All Posts
 						</Link>
 					</li>
 					<li className="mx-4 my-0">
