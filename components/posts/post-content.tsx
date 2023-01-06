@@ -1,10 +1,15 @@
 import Image from "next/image";
-import { Prism } from "react-syntax-highlighter";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
+import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
 
 import PostHeader from "./post-header";
 import { PostDetailPageProps } from "../../pages/posts/[slug]";
+
+SyntaxHighlighter.registerLanguage("javascript", js);
+SyntaxHighlighter.registerLanguage("css", css);
 
 const PostContent = ({ posts }: PostDetailPageProps) => {
 	const imagePath = `/images/posts/${posts.slug}/${posts.image}`;
@@ -55,9 +60,9 @@ const PostContent = ({ posts }: PostDetailPageProps) => {
 		 */
 		code: ({ className, children }: any) => {
 			return (
-				<Prism style={atomDark} language={className.substring(9)}>
+				<SyntaxHighlighter style={atomDark} language={className.substring(9)}>
 					{children[0]}
-				</Prism>
+				</SyntaxHighlighter>
 			);
 		},
 	};

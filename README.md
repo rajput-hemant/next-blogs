@@ -10,23 +10,82 @@
 
 # Next Blogs
 
-<!-- ## Directory Structure
+## Directory Structure
 
 </div>
 
 <details >
   <summary align=center>
 
-  #### Click to Expand
+#### Click to Expand
+
   </Summary>
 
 ```
-
+app
+|
+|-- components
+|   |-- contact
+|   |   `-- contact-form.tsx
+|   |
+|   |-- homepage
+|   |   |-- featured-posts.tsx
+|   |   `-- hero.tsx
+|   |
+|   |-- layout
+|   |   |-- layout.tsx
+|   |   |-- logo.tsx
+|   |   `-- main-navigation.tsx
+|   |-- posts
+|   |   |-- all-posts.tsx
+|   |   |-- post-content.tsx
+|   |   |-- post-header.tsx
+|   |   |-- post-item.tsx
+|   |   `-- posts-grid.tsx
+|   |
+|   `-- ui
+|       `-- notification.tsx
+|-- lib
+|   `-- post-utils.ts
+|
+|-- pages
+|   |-- api
+|   |   `-- contact.ts
+|   |-- posts
+|   |   |-- [slug].tsx
+|   |   `-- index.tsx
+|   |-- _app.tsx
+|   |-- _document.tsx
+|   |-- contact.tsx
+|   `-- index.tsx
+|
+|-- posts
+|   |-- getting-started-with-nextjs.md
+|   `-- mastering-javascript.md
+|
+|-- public
+|   |-- images
+|   |    |-- posts
+|   |    |   |-- getting-started-with-nextjs
+|   |    |   |   |-- getting-started-nextjs.png
+|   |    |   |   `-- nextjs-file-based-routing.png
+|   |    |   |
+|   |    |   `-- mastering-javascript
+|   |    |       `-- mastering-js-thumb.png
+|   |    |
+|   |    |-- nextjs-dark.svg
+|   |    |-- nextjs-light.svg
+|   |    `-- profile.png
+|   |
+|   `-- favicon.ico
+|
+`-- styles
+    `-- globals.css
 ```
 
 </details>
 
-<div align = center> -->
+<div align = center>
 
 ## Building from Source
 
