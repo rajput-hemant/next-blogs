@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const Handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	if (req.method == "POST") {
 		const { name, email, message } = req.body;
 
@@ -52,3 +52,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		});
 	}
 };
+
+export default Handler;

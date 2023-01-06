@@ -15,7 +15,7 @@ const Hero = () => {
 				/>
 			</div>
 			<h1 className="text-6xl mx-0 my-4 text-zinc-400">
-				Hi, I'm Hemant Rajput
+				Hi, I&apos;m Hemant Rajput
 			</h1>
 			<p className="text-2xl text-zinc-200 w-[90%] max-w-2xl m-auto">
 				I am currently learing ReactJS and NextJs for Web Development and
